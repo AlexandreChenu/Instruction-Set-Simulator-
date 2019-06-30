@@ -1,0 +1,5 @@
+ADD r3,-5,r15
+ADD r15,10,r5
+STORE r5,0,r15
+LOAD r5,0,r7
+L_loop:STOP

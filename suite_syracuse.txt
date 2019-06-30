@@ -1,0 +1,13 @@
+ADD r0,15,r3
+L_loop:SEQ r3,1,r4
+BRANZ r4,L_end
+AND r3,1,r5
+SEQ r5,0,r4
+BRANZ r4,L_par
+BRAZ r4,L_impar
+L_impar:MUL r3,3,r3
+ADD r3,1,r3
+JMP L_loop,r7
+L_par:DIV r3,2,r3
+JMP L_loop,r7
+L_end:STOP
